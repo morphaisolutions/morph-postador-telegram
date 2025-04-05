@@ -2,6 +2,6 @@ services:
   - type: cron
     name: morph-postador
     env: python
-    schedule: "@hourly"
+    schedule: "0 */3 * * *"
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python main.py"
