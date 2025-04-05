@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: morph-postador
+    env: python
+    schedule: "0 9 * * *"  # Todos os dias às 9h da manhã UTC
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
